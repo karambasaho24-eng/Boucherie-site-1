@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\SAKHO\\\\boucherie-site\" -Recurse -File -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch \"node_modules|\\\\.next\" } | Select-Object -ExpandProperty FullName | Sort-Object)"
+    ]
+  }
+}

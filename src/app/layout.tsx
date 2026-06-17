@@ -7,8 +7,6 @@ import Footer from "@/components/layout/Footer";
 import CartDrawer from "@/components/cart/CartDrawer";
 import PromoBar from "@/components/layout/PromoBar";
 import ScrollTop from "@/components/ui/ScrollTop";
-import { getSettings } from "@/lib/data";
-import { bootstrap } from "@/lib/bootstrap";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({
@@ -22,26 +20,36 @@ export const metadata: Metadata = {
     "Boucherie halal premium : bœuf, agneau, poulet, brochettes, merguez et packs barbecue. Qualité, fraîcheur et tradition.",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  await bootstrap();
-  const settings = getSettings();
+  const settings = {
+    promo_active: "0",
+    promo_title: "",
+    promo_text: "",
+    site_title: "Le Carrefour d'Orient",
+  };
+
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen bg-white text-ink-950 antialiased">
         <CartProvider>
           <ScrollTop />
+
           <PromoBar
-            enabled={settings.promo_active === "1"}
-            title={settings.promo_title}
-            text={settings.promo_text}
+            enabled={false}
+            title=""
+            text=""
           />
+
           <Navbar siteTitle={settings.site_title} />
+
           <main className="min-h-[60vh]">{children}</main>
-          <Footer settings={settings} />
+
+          <Footer settings={{}} />
+
           <CartDrawer />
         </CartProvider>
       </body>

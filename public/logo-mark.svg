@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="97" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#0a0a0a" stroke-width="1"/>
+
+  <text x="100" y="64" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9.5" letter-spacing="3" fill="#0a0a0a">ETB. ARTISAN</text>
+
+  <text x="100" y="112" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="30" letter-spacing="1" fill="#0a0a0a">BOUCHERIE</text>
+
+  <line x1="55" y1="124" x2="145" y2="124" stroke="#b5181f" stroke-width="1.5"/>
+
+  <text x="100" y="145" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="600" font-size="11" letter-spacing="2" fill="#0a0a0a">CARREFOUR D'ORIENT</text>
+
+  <text x="100" y="164" text-anchor="middle" font-family="'Space Mono', monospace" font-size="8" letter-spacing="2" fill="#6b6b68">LE MANS · HALAL</text>
+</svg>
